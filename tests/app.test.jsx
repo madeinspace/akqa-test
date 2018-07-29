@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow, render } from 'enzyme';
 
 import App from '../src/App';
-import Store from '../src/components/Store';
+import Store from '../src/components/store';
 
 describe('The App', () => {
   it('should render without throwing an error', () => {
@@ -17,7 +17,7 @@ describe('The App', () => {
   });
 });
 
-describe('The HelloWorld component', () => {
+describe('The Store component', () => {
   it('should render without throwing an error', () => {
     expect(shallow(<Store title="Woman's tops" />)).toExist();
   });

@@ -1,26 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader';
 import { Container, Row, Col } from 'reactstrap';
-import HelloWorld from './components/hello-world';
+import Store from './components/store';
 import './scss/main.scss';
+import data from './data/products.json';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <Container className="app">
-        <Row>
-          <Col>
-            <HelloWorld title="AKQA test" />
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
+const App = () => (
+  <Container className="app">
+    <Row>
+      <Col>
+        <Store title="Woman's tops" products={data} />
+      </Col>
+    </Row>
+  </Container>
+);
 
 export default hot(module)(App);
