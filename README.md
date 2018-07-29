@@ -8,6 +8,7 @@ src/
 |- index.jsx _______________________________ # Application entry 
 |- App.jsx _________________________________ # Application
 |  |- Components/ __________________________ # React components
+|- tests ___________________________________ # Tests directory
 
 webpack
 |- paths.js ________________________________ # webpack paths

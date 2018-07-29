@@ -9,6 +9,7 @@ module.exports = {
   module: {
     rules: [
       {
+        // lint before bundling
         enforce: 'pre',
         test: /\.(js|jsx)$/,
         loader: 'eslint-loader',
