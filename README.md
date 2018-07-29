@@ -32,5 +32,7 @@ webpack
 #### Tech stack
 
 1- React
+
 2- Webpack
+
 3- SCSS / CSS modules
