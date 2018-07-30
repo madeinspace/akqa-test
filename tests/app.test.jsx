@@ -1,6 +1,6 @@
 import 'jsdom-global/register';
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import App from '../src/App';
 

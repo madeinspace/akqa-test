@@ -1,5 +1,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const commonPaths = require('./paths');
 
 module.exports = {
@@ -8,6 +10,16 @@ module.exports = {
     filename: `${commonPaths.jsFolder}/[name].[hash].js`,
     path: commonPaths.outputPath,
     chunkFilename: '[name].[chunkhash].js',
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        sourceMap: true, // set to true if you want JS source maps
+      }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
   },
   module: {
     rules: [
@@ -34,7 +46,7 @@ module.exports = {
       root: commonPaths.root,
     }),
     new MiniCssExtractPlugin({
-      filename: `${commonPaths.cssFolder}/[name].css`,
+      filename: `${commonPaths.cssFolder}/[name].[contenthash].css`,
       chunkFilename: '[id].css',
     }),
   ],

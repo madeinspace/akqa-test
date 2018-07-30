@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
+import includes from 'lodash/includes';
+import reduce from 'lodash/reduce';
+import uniq from 'lodash/uniq';
 import {
     Navbar,
     NavbarBrand,
@@ -29,11 +31,11 @@ class Store extends Component {
         
         // get all available sizes based on each product available sizes.
         let availableSizes = [];
-        availableSizes = _.reduce(products, (coll, product) => {
+        availableSizes = reduce(products, (coll, product) => {
             // convert all sizes to upercase to avoid duplicate sizes with different caps (ie: m, M)
             coll.push(...product.size.map(s => s.toUpperCase()));
             // remove duplicates
-            return _.uniq(coll);
+            return uniq(coll);
         }, []);
 
         // finaly reorder the sizes based on a reference array and add 'ALL' to possible opt
@@ -49,7 +51,7 @@ class Store extends Component {
         const { products, currentSize } = this.state;
 
         const productList = products
-                            .filter(product => (currentSize === 'ALL' ? product : _.includes(product.size, currentSize)))
+                            .filter(product => (currentSize === 'ALL' ? product : includes(product.size, currentSize)))
                             .map(product => (<Card key={product.index} product={product} />));
 
         return (

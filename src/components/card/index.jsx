@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import style from './card.scss';
-import { Container, Row, Col } from 'reactstrap';
+import { Col } from 'reactstrap';
 
 
 const Card = (props) => {
