@@ -1,4 +1,4 @@
-# akqa-test for Fabrice Million
+# test for Fabrice Million
 
 ## Project structure
 
