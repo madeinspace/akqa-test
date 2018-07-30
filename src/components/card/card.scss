@@ -14,7 +14,7 @@
             font-size: 14px;
             margin: 0 0 5px;
             a {
-                color: #252525;
+                color: $defaultText;
                 text-decoration: none;
                 -webkit-transition: color 0.3s ease;
                 -o-transition: color 0.3s ease;
@@ -22,7 +22,7 @@
             }
         }
         .price {
-            color: #d35050;
+            color: $defaultRed;
             font-size: 14px;
             font-weight: 500;
         }
@@ -36,7 +36,7 @@
             color: #fff;
             font-size: 12px;
             font-weight: 500;
-            background: #df4243;
+            background: $defaultRed;
             padding: 6px 10px;
             text-align: center;
             left: inherit;
@@ -58,7 +58,7 @@
                 left: 6px;
                 border-width: 3px;
                 border-style: solid;
-                border-color: #df4243 transparent transparent #df4243;
+                border-color: $defaultRed transparent transparent $defaultRed;
             }
         }
         .exclusive {
@@ -67,7 +67,7 @@
             color: #fff;
             font-size: 12px;
             font-weight: 500;
-            background: #04bf28;
+            background: $defaultGreen;
             padding: 6px 10px;
             text-align: center;
             left: inherit;
@@ -89,7 +89,7 @@
                 left: 6px;
                 border-width: 3px;
                 border-style: solid;
-                border-color: #04bf28 transparent transparent #04bf28;
+                border-color: $defaultGreen transparent transparent $defaultGreen;
             }
         }
     }

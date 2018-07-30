@@ -28,10 +28,9 @@ const Card = (props) => {
         <Col sm="6" xs="12" md="4" lg="3">
             <div className={style.card}>
                 <figure className={style.heroPic}>
-                    <img src={images[product.productImage]} alt="" />
+                    <img src={images[product.productImage]} alt={product.productName} />
                 </figure>
                 { product.isSale || product.isExclusive ?
-
                     <div className={style.badges}>
                         { product.isSale ?
                             <span className={style.onSale}>Sale</span>

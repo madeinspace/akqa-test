@@ -10,7 +10,7 @@ import style from './store.scss';
 import SizeFilter from '../size-filter';
 import Card from '../card';
 
-export default class Store extends Component {
+class Store extends Component {
     constructor(props) {
         super(props);
 
@@ -74,3 +74,5 @@ export default class Store extends Component {
         );
     }
 }
+
+export default Store;
