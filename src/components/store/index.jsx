@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import style from './store.scss';
 import SizeFilter from '../size-filter';
+import Card from '../card';
 
 export default class Store extends Component {
     constructor(props) {
@@ -10,7 +11,6 @@ export default class Store extends Component {
         const { products } = this.props;
 
         this.state = {
-            // isFiltered: false,
             currentSize: 'ALL',
             products,
         };
@@ -44,10 +44,7 @@ export default class Store extends Component {
 
         const productList = products
                             .filter(product => (currentSize === 'ALL' ? product : _.includes(product.size, currentSize)))
-                            .map(product => (
-                                <div key={product.index}>
-                                {product.productName}
-                                </div>));
+                            .map(product => (<Card key={product.index} data={product} />));
 
         return (
             <div className={style.store}>
