@@ -50,8 +50,6 @@ class Store extends Component {
     render() {
         const { title } = this.props;
         const { products, currentSize } = this.state;
-        
-
         const productList = products
                             .filter(product => (currentSize === 'ALL' ? product : includes(product.size, currentSize)))
                             .map(product => (
@@ -62,7 +60,6 @@ class Store extends Component {
 
         return (
             <div className={style.store}>
-            
                 <Navbar className={style.mainNav} color="light" light expand="md">
                     <NavbarBrand href="/">
                         <h1 className={style.title}>

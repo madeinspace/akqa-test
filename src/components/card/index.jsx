@@ -2,10 +2,8 @@ import React from 'react';
 import { Col } from 'reactstrap';
 import style from './card.scss';
 
-
 const Card = (props) => {
     const { product, imgUrl } = props;
-    
 
     return (
         <Col sm="6" xs="12" md="4" lg="3">
@@ -20,15 +18,17 @@ const Card = (props) => {
                             ? (
                                 <span className={style.onSale}>
                                     Sale
-                                </span>)
-                                : null
+                                </span>
+                                )
+                            : null
                             }
                             { product.isExclusive
                             ? (
                                 <span className={style.exclusive}>
                                     Exclusive
-                                </span>)
-                                : null
+                                </span>
+                                )
+                            : null
                             }
                         </div>
                     )

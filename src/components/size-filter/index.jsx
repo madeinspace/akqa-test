@@ -7,7 +7,6 @@ import {
 } from 'reactstrap';
 import style from './size-filter.scss';
 
-
 class SizeFilter extends Component {
     constructor(props) {
         super(props);
