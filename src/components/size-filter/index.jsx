@@ -7,16 +7,15 @@ import {
 } from 'reactstrap';
 import style from './size-filter.scss';
 
-
 class SizeFilter extends Component {
     constructor(props) {
         super(props);
-        this.toggle = this.toggle.bind(this);
         this.state = {
-          dropdownOpen: false,
-          dropDownValue: '',
+            dropdownOpen: false,
+            dropDownValue: '',
         };
-
+        
+        this.toggle = this.toggle.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
 
