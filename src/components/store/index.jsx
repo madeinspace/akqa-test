@@ -50,6 +50,7 @@ class Store extends Component {
     render() {
         const { title } = this.props;
         const { products, currentSize } = this.state;
+        // filter products based on selected size.
         const productList = products
                             .filter(product => (currentSize === 'ALL' ? product : includes(product.size, currentSize)))
                             .map(product => (

@@ -6,9 +6,9 @@
  */
 const context = require.context('../../../assets/img', false, /\.(png|jpe?g|svg)$/);
 const images = {};
-context.keys().map((item) => {
-    const key = item.replace('./', '');
-    const val = context(item);
+context.keys().map((img) => {
+    const key = img.replace('./', ''); // the actuall file name
+    const val = context(img); // the path to the image
     images[key] = val;
     return null;
 });
