@@ -1,11 +1,15 @@
 @import "../../scss/_variables";
 
 .store{
-    margin-top: 10rem;
-    font-size: 2rem;
-    text-align: center;
+    margin-top: 2rem;
 
-    .mainTitle{
-
+    .mainNav{
+        margin-bottom: 10px;
+        
+        .title{
+            font-size: 24px;
+            font-weight:bold;
+        }
     }
+
 }

@@ -1,1 +1,96 @@
 @import "../../scss/_variables";
+.card {
+    border: 1px solid $grayLight;
+    margin-right: -1px;
+    margin-top: -1px;
+    .heroPic {
+        img {
+            width: 100%;
+        }
+    }
+    .metas {
+        padding: 10px;;
+        .name {
+            font-size: 14px;
+            margin: 0 0 5px;
+            a {
+                color: #252525;
+                text-decoration: none;
+                -webkit-transition: color 0.3s ease;
+                -o-transition: color 0.3s ease;
+                transition: color 0.3s ease;
+            }
+        }
+        .price {
+            color: #d35050;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    .badges {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        .onSale {
+            position: relative;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            background: #df4243;
+            padding: 6px 10px;
+            text-align: center;
+            left: inherit;
+            text-transform: uppercase;
+            min-height: auto;
+            font-family: "Poppins", Helvetica, Arial, sans-serif;
+            z-index: 9;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            display: inline-block;
+            line-height: 1;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 6px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: #df4243 transparent transparent #df4243;
+            }
+        }
+        .exclusive {
+            position: relative;
+            margin-left: 10px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            background: #04bf28;
+            padding: 6px 10px;
+            text-align: center;
+            left: inherit;
+            text-transform: uppercase;
+            min-height: auto;
+            font-family: "Poppins", Helvetica, Arial, sans-serif;
+            z-index: 9;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            display: inline-block;
+            line-height: 1;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 6px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: #04bf28 transparent transparent #04bf28;
+            }
+        }
+    }
+}

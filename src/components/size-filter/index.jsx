@@ -5,6 +5,7 @@ import {
     DropdownMenu,
     DropdownItem,
 } from 'reactstrap';
+import style from './size-filter.scss';
 
 
 class SizeFilter extends Component {
@@ -38,7 +39,7 @@ class SizeFilter extends Component {
         const { dropdownOpen, dropDownValue } = this.state;
         const menu = (
             <Dropdown size="sm" isOpen={dropdownOpen} toggle={this.toggle}>
-                <DropdownToggle caret>
+                <DropdownToggle caret className={style.filters}>
                 {dropDownValue || 'Filter by size'}
                 </DropdownToggle>
                 <DropdownMenu>

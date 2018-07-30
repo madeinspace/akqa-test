@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import {
+    Navbar,
+    NavbarBrand,
+    Nav,
+    Row,
+} from 'reactstrap';
 import style from './store.scss';
 import SizeFilter from '../size-filter';
 import Card from '../card';
@@ -44,17 +50,26 @@ export default class Store extends Component {
 
         const productList = products
                             .filter(product => (currentSize === 'ALL' ? product : _.includes(product.size, currentSize)))
-                            .map(product => (<Card key={product.index} data={product} />));
+                            .map(product => (<Card key={product.index} product={product} />));
 
         return (
             <div className={style.store}>
-                <div className={style.mainTitle}>
-                    {title}
-                    <SizeFilter onChange={this.handleSizeFilterChange} sizes={this.getSizes()} />
-                </div>
-                <div>
+            
+                <Navbar className={style.mainNav} color="light" light expand="md">
+                    <NavbarBrand href="/">
+                        <h1 className={style.title}>
+                            {title}
+                        </h1>
+                    </NavbarBrand>
+                    <Nav className="ml-auto" navbar>
+                        <SizeFilter
+                            onChange={this.handleSizeFilterChange}
+                            sizes={this.getSizes()} />
+                    </Nav>
+                </Navbar>
+                <Row className="no-gutters">
                     {productList}
-                </div>
+                </Row>
             </div>
         );
     }
