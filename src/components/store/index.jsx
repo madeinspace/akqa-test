@@ -11,6 +11,7 @@ import {
 import style from './store.scss';
 import SizeFilter from '../size-filter';
 import Card from '../card';
+import images from '../products-images';
 
 class Store extends Component {
     constructor(props) {
@@ -49,10 +50,15 @@ class Store extends Component {
     render() {
         const { title } = this.props;
         const { products, currentSize } = this.state;
+        
 
         const productList = products
                             .filter(product => (currentSize === 'ALL' ? product : includes(product.size, currentSize)))
-                            .map(product => (<Card key={product.index} product={product} />));
+                            .map(product => (
+                            <Card
+                                key={product.index}
+                                product={product}
+                                imgUrl={images[product.productImage]} />));
 
         return (
             <div className={style.store}>
