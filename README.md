@@ -20,9 +20,9 @@ webpack
 
 ### Installation
 
-1- Clone the boilerplate repo
+1- Clone the app repo
 
-`git clone https://github.com/madeinspace/akqa-test.git`
+`git clone https://github.com/madeinspace/f-end-test.git`
 
 2- `yarn` or `npm install` to install npm packages
 
@@ -34,6 +34,8 @@ webpack
 
 1- React
 
-2- Webpack
+2- Webpack 4
 
 3- SCSS / CSS modules
+
+4- ES6
