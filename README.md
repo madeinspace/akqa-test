@@ -3,12 +3,15 @@
 ## Project structure
 
 ````
-build/
+assets/ ___________________________________ # Images/Fonts etc.
+build/  ___________________________________ # Production dir
 src/
 |- index.jsx _______________________________ # Application entry 
 |- App.jsx _________________________________ # Application
-|  |- Components/ __________________________ # React components
-|- tests ___________________________________ # Tests directory
+|  |- components/ __________________________ # React components
+|  |- scss/ ________________________________ # Styles
+
+tests/ _____________________________________ # Tests directory
 
 webpack
 |- paths.js ________________________________ # webpack paths
