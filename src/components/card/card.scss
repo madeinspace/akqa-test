@@ -27,10 +27,12 @@
             font-weight: 500;
         }
     }
+    
     .badges {
         position: absolute;
         right: 20px;
         top: 20px;
+        // TODO: make a mixin out of the below
         .onSale {
             position: relative;
             color: #fff;
